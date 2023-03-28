@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any City</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo"><img class="icon" src="./imgs/icons8-storm-96.png" alt=""></div>
+
+        <div id="navigation">
+            <ul>
+                <li id="home"><img class="icon" src="./imgs/icons8-home-page-96.png" alt=""></li>
+                <li id="location"><img class="icon" src="./imgs/icons8-location-96.png" alt=""></li>
+                <li id="weekly-expanded"><img class="icon" src="./imgs/icons8-tear-off-calendar-96.png" alt=""></li>
+                <li id="account"><img class="icon" src="./imgs/icons8-user-96.png" alt=""></li>
+                <li id="notifications"><img class="icon" src="./imgs/icons8-notification-96.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div id="logo"><img class="icon" src="./imgs/icons8-shutdown-96.png" alt=""></div>
+    </nav>
+    <div id="topbar">
+        <div id="welcome">
+            <img src="#" alt="">
+            <h1>Welcome, Your Name</h1>
+        </div>
+        <div id="navigator">
+            <div id="search">
+                <img class="search-icon" src="./imgs/icons8-search-96.png" alt="">
+                <input type="text" placeholder="Enter location">
+            </div>
+            <div id="locator"><img class="icon" src="./imgs/icons8-my-location-96.png" alt=""></div>
+            <div id="temp">
+                <div id="farehnheit">F°</div>
+                <div id="celsius">C°</div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section id="day-week">
+            <div id="expanded-view">
+                <ul>
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">Week</a></li>
+                </ul>
+            </div>
+
+        </section>
+            <div class="sq-desc" id="one"> 
+                <div class="day-descriptor">S</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="two"> 
+                <div class="day-descriptor">M</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="three"> 
+                <div class="day-descriptor">T</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="four"> 
+                <div class="day-descriptor">W</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="five"> 
+                <div class="day-descriptor">T</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="six"> 
+                <div class="day-descriptor">F</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+            <div class="sq-desc" id="seven"> 
+                <div class="day-descriptor">S</div>
+                <div class="hour-descriptor">00:00</div>
+            </div>
+        <section id="weather-descriptions">
+            <div id="Wind-status">Wind Status</div>
+            <div id="Visibility">Visibility</div>
+            <div id="air-quality">Air Quality</div>
+            <div id="Humidity">Humidity</div>
+            <div id="uv">UV</div>
+        </section>
+    </main>
+    <article>
+        <div id="date">
+            <div id="day">Monday</div>
+            <div id="today">March 23, 2023</div>
+        </div>
+
+        <div id="article-weather">
+            <img class="article-weather" src="./imgs/icons8-sun-96.png" alt="">
+        </div>
+
+        <div id="weather-description">
+            <div id="temp-degree">85° <span>f</span> </div>
+            <div id="temp-desc">Sunny</div>
+        </div>
+
+        <div id="article-location">New York, NY, USA</div>
+
+        <button>Search Nearby Cities</button>
+    </article> <!-- SIDE WEATHER PREVIEW-->
+    
+</body>
+</html>

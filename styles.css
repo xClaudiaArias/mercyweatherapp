@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#container {
+    width: 100vw;
+}
+
 .icon {
     width: 24px;
     height: 24px;
@@ -32,6 +36,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
+    
 }
 
 nav #navigation {
@@ -49,6 +54,10 @@ nav #navigation ul {
     align-items: center;
 }
 
+h1 {
+    color: rgb(93, 112, 255);
+}
+
 #topbar {
     grid-area: topbar;
     display: flex;
@@ -57,6 +66,7 @@ nav #navigation ul {
     align-items: center;
     padding: 0 20px;
     /* border: 1px solid brown; */
+    background-color: ghostwhite;
 }
 
 #topbar #navigator {
@@ -84,6 +94,13 @@ nav #navigation ul {
     align-items: center;
 }
 
+#topbar #navigator #temp .deg:hover {
+    background-color: rgb(93, 112, 255);
+    color: white;
+    border: 1px solid white;
+}
+
+
 
 #topbar #welcome {
     display: flex;
@@ -94,20 +111,25 @@ nav #navigation ul {
 }
 
 #topbar #navigator #search {
-    border: 1px solid black;
+    border: 1px solid rgb(129, 129, 129);
     width: 340px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
     border-radius: 50px;
+    background-color: white;
 }
 
 #topbar #navigator #search input[type=text] {
     border: none;
     padding-left: 10px;
+    outline: none;
 }
 
+.search-icon {
+    opacity: .4;
+}
 
 /* #topbar #welcome #profile-pic {
     width: 60px;
@@ -123,10 +145,10 @@ main {
 
 main  #day-week {
     padding: 20px;
-    background-color: ghostwhite;
+    /* background-color: ghostwhite; */
 }
 
-main  #day-week #expanded-view ul {
+main  #day-week #day-week-menu ul {
     /* border: 1px solid blue; */
     display: flex;
     justify-content: flex-start;
@@ -134,22 +156,101 @@ main  #day-week #expanded-view ul {
     list-style-type: none;
 }
 
-main  #day-week #expanded-view ul li {
+main  #day-week #day-week-menu ul li {
     padding-right: 80px;
 }
 
-main  #day-week #expanded-view ul li a {
+main  #day-week #day-week-menu ul li a {
     color: black;
     text-decoration: none;
 }
 
-main  #day-week #expanded-view ul li a:hover {
-    color: #3944bc;
+main  #day-week #day-week-menu ul li a:hover {
+    color: rgb(93, 112, 255);
     text-decoration: underline;
+}
+main #expanded-view {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: ghostwhite;
+}
+
+main #expanded-view .sq-desc {
+    width: 130px;
+    height: 200px;
+    background-color: white;
+    /* border: 1px black solid; */
+    box-shadow: 2px 2px 6px 1px rgba(145, 152, 199, .2);
+    border-radius: 8px;
+    padding: 5px;
+}
+
+main #weather-descriptions {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "wind-status visibility visibility"
+                        "air-quality air-quality humidity"
+    ;
+    padding: 10px;
+}
+
+main #weather-descriptions .desc-sq {
+    height: 164px;
+    border: 1px solid black;
+}
+
+main #weather-descriptions .desc-sq p{
+    height: 164px;
+    padding: 10px;
+}
+
+main #weather-descriptions #wind-status {
+    grid-area: wind-status;
+    width: 300px; 
+    margin: 8px 10px 0 0;
+}
+
+main #weather-descriptions #visibility {
+    grid-area: visibility;
+    margin: 8px 5px 0 0;
+}
+
+main #weather-descriptions #air-quality {
+    grid-area: air-quality;
+    margin: 8px 10px 0 0;
+}
+
+main #weather-descriptions #humidity {
+    grid-area: humidity;
+    width: 400px;
+    margin: 8px 5px 0 0;
 }
 
 
 article {
+    border-left: 5px solid rgb(93, 112, 255);
     grid-area: article;
+    text-align: center;
+    background-color: ghostwhite;
+    /* box-shadow: -2px 0 10px 2px rgb(205, 205, 205); */
 }
 
+article #date {
+    /* border: 1px solid blue; */
+    width: inherit;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article #date h2 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+article #date h3 {
+    font-weight: 400;
+}

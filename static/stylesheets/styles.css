@@ -118,25 +118,38 @@ h1 {
     align-items: center;
     padding: 5px;
     border-radius: 50px;
-    background-color: white;
+    background: none;
 }
 
 #topbar #navigator #search input[type=text] {
+    width: 220px;
     border: none;
     padding-left: 10px;
     outline: none;
+    flex: 2;
+    background: none;
 }
 
 .search-icon {
     opacity: .4;
 }
 
-/* #topbar #welcome #profile-pic {
-    width: 60px;
-    height: 60px;
-    background-size: cover;
+#topbar #navigator #search button{
+    background-color: rgb(93, 112, 255);
+    border: none;
+    width: 80px;
+    height: 20px;
+    color: white;
     border-radius: 50px;
-} */
+}
+
+#topbar #navigator #search button:hover{
+    background-color: rgb(183, 191, 255);
+    color: rgb(93, 112, 255);
+}
+
+
+
 
 main {
     grid-area: main;

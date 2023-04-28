@@ -34,10 +34,10 @@
             </div>
             <div id="navigator">
                 <div id="search">
-                    <form action="/" method="post">
                     <img class="search-icon" src="../static/imgs/icons8-search-96.png" alt=""/>
-                    <input type="text" name="city" placeholder="Enter location">
-                    <button type="submit" class="btn">CHECK</button>
+                    <form action="/" method="post">
+                        <input type="text" name="city" placeholder="Enter location">
+                        <button type="submit" class="btn">Search</button>
                     </form>
                 </div>
                 <div id="temp">
@@ -159,7 +159,6 @@
     
             <div id="weather-description">
                 <div id="temp-degree">
-                    
                     {% if temperature %}
                         {{temperature}}°
                     {% else %}
@@ -168,6 +167,26 @@
 
                     <span>f</span> 
                 </div>
+                <div id="temp-minmax">
+                    <div class="low">
+                        <span>Low: </span>
+                        {% if low %}
+                            {{low}}°
+                        {% else %}
+                            56°
+                        {% endif %}
+                    </div>
+                    <div id="low-high">
+                        <div class="high">
+                            <span>High: </span>
+                            {% if high %}
+                                {{high}}°
+                            {% else %}
+                                72°
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>  
                 <div id="temp-desc">
                     {% if w_description %}
                         {{w_description}}

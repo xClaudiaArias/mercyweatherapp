@@ -15,6 +15,8 @@ def index():
 
         # convert data into variables 
         temperature = int(json_object['main']['temp']-273.15) 
+        low = int(json_object['main']['temp_min']-273.15) 
+        high = int(json_object['main']['temp_max']-273.15) 
         humidity = int(json_object['main']['humidity'])
         pressure = int(json_object['main']['pressure'])
         visibility = int(json_object['visibility'])
@@ -24,7 +26,7 @@ def index():
 
 
         # print(icon)
-        return render_template('index.html',temperature=temperature, visibility=visibility, pressure=pressure,humidity=humidity,city_name=city_name,wind=wind, w_description=w_description, icon=icon)
+        return render_template('index.html',temperature=temperature, low=low, high=high, visibility=visibility, pressure=pressure,humidity=humidity,city_name=city_name,wind=wind, w_description=w_description, icon=icon)
     else:
         return render_template('index.html') 
 

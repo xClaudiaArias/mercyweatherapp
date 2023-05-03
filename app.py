@@ -14,7 +14,7 @@ def index():
         json_object = r.json()
 
         # convert data into variables 
-        temperature = int(json_object['main']['temp']-273.15) 
+        temperature = int((json_object['main']['temp']-273.15)*(9/5) + 32) 
         low = int(json_object['main']['temp_min']-273.15) 
         high = int(json_object['main']['temp_max']-273.15) 
         humidity = int(json_object['main']['humidity'])

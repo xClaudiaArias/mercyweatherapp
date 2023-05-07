@@ -1,5 +1,19 @@
 from flask import Flask,render_template,request
 import requests
+import datetime
+
+e = datetime.datetime.now()
+    
+# a is the day of the week, b is the month, d is the day, y is the year
+current_date = (e.strftime("%a, %b %d, %Y")) 
+    
+day = current_date.split()
+weekday = day[0]
+weekday = weekday.replace(",", " ") 
+date = day[1] + " " + day[2] + day[3]
+    
+print(weekday) # prints day of the week
+print(date) # prints the rest of today's date
 
 app = Flask(__name__)
 
@@ -14,7 +28,7 @@ def index():
         json_object = r.json()
 
         # convert data into variables 
-        temperature = int(json_object['main']['temp']-273.15) 
+        temperature = int((json_object['main']['temp']-273.15)*(9/5) + 32) 
         low = int(json_object['main']['temp_min']-273.15) 
         high = int(json_object['main']['temp_max']-273.15) 
         humidity = int(json_object['main']['humidity'])
@@ -26,7 +40,7 @@ def index():
 
 
         # print(icon)
-        return render_template('index.html',temperature=temperature, low=low, high=high, visibility=visibility, pressure=pressure,humidity=humidity,city_name=city_name,wind=wind, w_description=w_description, icon=icon)
+        return render_template('index.html',temperature=temperature, low=low, high=high, visibility=visibility, pressure=pressure,humidity=humidity,city_name=city_name,wind=wind, w_description=w_description, icon=icon, weekday=weekday, date=date)
     else:
         return render_template('index.html') 
 

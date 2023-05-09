@@ -65,69 +65,49 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    /* border: 1px solid brown; */
     background-color: ghostwhite;
 }
 
 #topbar #navigator {
     display: flex;
-    width: 500px;
-    justify-content: space-between;
-    /* border: 1px solid yellow; */
+    width: 600px;
+    justify-content: flex-end;
 }
 
-#topbar #navigator #temp {
-    display: flex;
-    width: 140px;
-    justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid magenta; */
-}
-
-#topbar #navigator #temp .deg {
-    border: 1px solid black;
-    border-radius: 50px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#topbar #navigator #temp .deg:hover {
-    background-color: rgb(93, 112, 255);
-    color: white;
-    border: 1px solid white;
-}
-
-
-
-#topbar #welcome {
+#topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid green; */
-    width: 400px;
 }
 
 #topbar #navigator #search {
-    border: 1px solid rgb(129, 129, 129);
-    width: 340px;
+    width: 520px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
     border-radius: 50px;
     background: none;
 }
 
+#topbar #navigator #search form {
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+
 #topbar #navigator #search input[type=text] {
-    width: 220px;
-    border: none;
+    width: 240px;
+    height: 30px;
+    border: 1px solid rgb(221, 221, 221);
     padding-left: 10px;
     outline: none;
-    flex: 2;
     background: none;
+    border-radius: 50px;
 }
 
 .search-icon {
@@ -138,7 +118,7 @@ h1 {
     background-color: rgb(93, 112, 255);
     border: none;
     width: 80px;
-    height: 20px;
+    height: 30px;
     color: white;
     border-radius: 50px;
 }
@@ -148,21 +128,15 @@ h1 {
     color: rgb(93, 112, 255);
 }
 
-
-
-
 main {
     grid-area: main;
-    /* border: 1px solid red; */
 }
 
 main  #day-week {
     padding: 20px;
-    /* background-color: ghostwhite; */
 }
 
 main  #day-week #day-week-menu ul {
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -193,7 +167,6 @@ main #expanded-view .sq-desc {
     width: 130px;
     height: 200px;
     background-color: white;
-    /* border: 1px black solid; */
     box-shadow: 2px 2px 6px 1px rgba(145, 152, 199, .2);
     border-radius: 8px;
     padding: 5px;
@@ -247,7 +220,6 @@ article {
     grid-area: article;
     text-align: center;
     background-color: ghostwhite;
-    /* box-shadow: -2px 0 10px 2px rgb(205, 205, 205); */
 }
 
 article #date {
@@ -294,6 +266,20 @@ article #weather-description #temp-desc {
     color: #000;
 }
 
+article #weather-description #temp-minmax #low-high {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(116, 126, 204);
+    padding: 10px 0;
+}
+
+article #weather-description #temp-minmax #low-high .low,
+article #weather-description #temp-minmax #low-high .high {
+    padding: 10px;
+    font-size: 16px;
+}
+
 article #article-location {
     padding: 30px 0;
 }
@@ -335,4 +321,22 @@ article #article-btn button:hover {
     border: 1px solid rgb(93, 112, 255);
     border-radius: 8px;
     color: white;
+}
+
+#farehnheit {
+    background-color: rgb(93, 112, 255);
+    color: white;
+    font-weight: 500;
+}
+
+#topbar #navigator #temp #farehnheit {
+    border: none;
+}
+
+select {
+    border: 1px solid rgb(221, 221, 221);
+    height: 30px;
+    border-radius: 8px;
+    color: rgb(120, 120, 120);
+    background-color: none;
 }
